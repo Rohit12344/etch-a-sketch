@@ -10,14 +10,15 @@ h1
     text-align: center;
     letter-spacing: 6px;
     font-size: 50px;
-    padding: 20px 0;
+    padding: 10px 0;
     margin: 0;
 
 }
 
 h2
 {
-    margin: 15px 0 20px 0;
+    font-size: 24px;
+    margin: 5px 0 12px 0;
     border-bottom: 2px solid #1a1a1a;
 }
 
@@ -25,12 +26,12 @@ button
 {
     font-family: 'Prompt', sans-serif;
     padding: 9px 35px;
-    font-size: 20px;
+    font-size: 16px;
     background-color: #1a1a1a;
     color: #fcfcfc;
     border: 2px solid #fcfcfc;
     border-radius: 30px;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
 }
 
 .settings
@@ -43,8 +44,7 @@ button
     width: 1000px;
     border: 2px solid #1a1a1a;
     border-radius: 30px;
-    padding: 5px 0;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 45px auto;
 }
 
 button:hover
@@ -60,7 +60,7 @@ button:hover
     width: 500px;
     height: 500px;
     border: 0;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     display: flex;
     flex-direction: column;
 }
