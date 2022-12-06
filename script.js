@@ -1,4 +1,4 @@
-let gridSize;
+let gridSize, temp, i = 0;
 const container = document.querySelector('.container');
 const buttons = document.querySelectorAll('button');
 
@@ -32,7 +32,7 @@ function createGrid(grid_size)
             {
                 boxes.style.borderTopWidth = '3px';
             }
-            else if(j == grid_size - 1)
+            if(j == grid_size - 1)
             {
                 boxes.style.borderBottomWidth = '3px';
             }
@@ -43,6 +43,7 @@ function createGrid(grid_size)
     }
 }
 
+gridSize = 16;
 createGrid(16);
 
 function listenerForDraw(e)
@@ -115,25 +116,27 @@ function shadeDraw()
 }
 
 buttons[0].addEventListener('click', () => {
+    i = 1;
     gridSize = +(prompt('Enter how many squares do you want in a row & a column: '));
     if(gridSize)
     {
+        temp = gridSize;
         createGrid(gridSize);
-    }
-    else
-    {
-        createGrid(16);
     }
 })
 
 buttons[1].addEventListener('click' , () => {
-    if(gridSize)
+    if(i)
     {
+        if(gridSize === 0 || gridSize === NaN)
+        createGrid(temp);
+
+        else if(gridSize)
         createGrid(gridSize);
     }
     else
     {
-        createGrid(16);
+        createGrid(gridSize);
     }
 })
 
